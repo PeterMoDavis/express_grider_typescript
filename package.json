@@ -1,0 +1,26 @@
+{
+  "name": "express_grider_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterMoDavis/express_grider_typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterMoDavis/express_grider_typescript/issues"
+  },
+  "homepage": "https://github.com/PeterMoDavis/express_grider_typescript#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.9"
+  }
+}
