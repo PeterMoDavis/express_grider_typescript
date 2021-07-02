@@ -9,5 +9,13 @@ router.get('/login', function (req, res) {
 });
 router.post('/login', function (req, res) {
     var _a = req.body, email = _a.email, password = _a.password;
-    res.send(email + password);
+    if (email && password && email === 'gary@gary.com' && password === 'gary') {
+        //mark this person logged in
+        req.session = { loggedIn: true };
+        //redirect to correct route
+        res.redirect('/');
+    }
+    else {
+        res.send('Invalid email or password.');
+    }
 });
